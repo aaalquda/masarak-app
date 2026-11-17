@@ -22,6 +22,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-ap
 .seg button[aria-pressed="true"]{background:var(--brand);color:#fff}
 .seg button:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
 main{max-width:560px;margin:0 auto;padding:20px 16px 32px}
+body{background:#f4f6fa}.top{background:#fff}
 .sub{margin:0 0 18px;color:var(--muted);font-size:.92rem}
 .cont{display:block;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:18px;padding:20px;margin:0 0 26px;text-decoration:none}
 .cont[hidden]{display:none}
@@ -31,13 +32,17 @@ main{max-width:560px;margin:0 auto;padding:20px 16px 32px}
 .cont:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px;font-weight:600}
 [dir=rtl] h2{text-transform:none;letter-spacing:0;font-size:.95rem}
-a.r{display:flex;align-items:center;gap:14px;min-height:64px;padding:8px 2px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
-a.r b{flex:0 0 3.4em;color:var(--code)}
-a.r span{flex:1}
-a.r::after{content:'›';color:var(--muted);font-size:1.4rem}
+.list{display:grid;gap:12px;margin-top:10px}
+a.r{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 14px;background:#fff;border:1.5px solid #b9c7da;border-inline-start:6px solid var(--brand);border-radius:14px;
+  box-shadow:0 3px 10px rgba(20,35,59,.14);color:var(--ink);text-decoration:none;transition:transform .08s,box-shadow .15s,border-color .15s}
+a.r b{flex:0 0 auto;min-width:56px;height:44px;padding:0 8px;border-radius:10px;background:var(--brand2);color:#fff;display:grid;place-items:center;font-size:.95rem;font-weight:700}
+a.r span{flex:1;font-weight:700;line-height:1.3;color:#0f1f36}
+a.r::after{content:'›';flex:0 0 36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:1.3rem;line-height:1}
 [dir=rtl] a.r::after{content:'‹'}
+a.r:hover{border-color:var(--brand2);box-shadow:0 4px 14px rgba(20,35,59,.14)}
+a.r:active{transform:scale(.98);background:#f3f7fc}
+a.r:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 [dir=rtl] .go-arrow{display:inline-block;transform:scaleX(-1)}
-a.r:hover,a.r:focus-visible{background:var(--seg);outline:none}
 footer{margin-top:22px;font-size:.82rem;color:var(--muted)}
 </style>
 </head>
@@ -57,7 +62,7 @@ footer{margin-top:22px;font-size:.82rem;color:var(--muted)}
     <span class="go"><span data-t="open">Open my plan</span>&nbsp;<span class="go-arrow" aria-hidden="true">→</span></span>
   </a>
   <h2 data-t="all">All programs</h2>
-  <nav aria-label="Programs">
+  <nav class="list" aria-label="Programs">
     <a class="r" data-p="EPET" href="EPET_Masarak_V2_7_24.html"><b data-t="EPETc">EPET</b><span data-t="EPET">Electrical Power Engineering Technology</span></a>
     <a class="r" data-p="MMET" href="MMET_Masarak_V2_7_24.html"><b data-t="MMETc">MMET</b><span data-t="MMET">Mechanical Maintenance Engineering Technology</span></a>
     <a class="r" data-p="CHET" href="CHET_Masarak_V2_7_24.html"><b data-t="CHETc">CHET</b><span data-t="CHET">Chemical Engineering Technology</span></a>
