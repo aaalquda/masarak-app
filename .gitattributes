@@ -1,0 +1,2 @@
+# Masarak files are SHA-256 governed. Preserve exact bytes on checkout.
+* -text
