@@ -37,6 +37,8 @@ body{background:#f4f6fa}.top{background:#fff}
 h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 4px;font-weight:600}
 [dir=rtl] h2{text-transform:none;letter-spacing:0;font-size:.95rem}
 .list{display:grid;gap:12px;margin-top:10px}
+.col{margin:0 0 8px;font-weight:700;font-size:1.05rem;color:var(--brand);line-height:1.35}
+.col2{margin:22px 0 -2px}
 a.r{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 14px;background:#fff;border:1.5px solid #b9c7da;border-inline-start:6px solid var(--brand);border-radius:14px;
   box-shadow:0 3px 10px rgba(20,35,59,.14);color:var(--ink);text-decoration:none;transition:transform .08s,box-shadow .15s,border-color .15s}
 a.r b{flex:0 0 auto;min-width:56px;height:44px;padding:0 8px;border-radius:10px;background:var(--brand2);color:#fff;display:grid;place-items:center;font-size:.95rem;font-weight:700}
@@ -65,11 +67,13 @@ footer{margin-top:22px;font-size:.82rem;color:var(--muted)}
     <strong id="contName"></strong>
     <span class="go"><span data-t="open">Open my plan</span>&nbsp;<span class="go-arrow" aria-hidden="true">→</span></span>
   </a>
+  <p class="col" data-t="col1">College of Applied Industrial Technology (CAIT) – Baish</p>
   <h2 data-t="all">All programs</h2>
   <nav class="list" aria-label="Programs">
     <a class="r" data-p="EPET" href="EPET_Masarak_V2_7_24.html"><b data-t="EPETc">EPET</b><span data-t="EPET">Electrical Power Engineering Technology</span></a>
     <a class="r" data-p="MMET" href="MMET_Masarak_V2_7_24.html"><b data-t="MMETc">MMET</b><span data-t="MMET">Mechanical Maintenance Engineering Technology</span></a>
     <a class="r" data-p="CHET" href="CHET_Masarak_V2_7_24.html"><b data-t="CHETc">CHET</b><span data-t="CHET">Chemical Engineering Technology</span></a>
+    <p class="col col2" data-t="col2">College of Engineering and Computer Science</p>
     <a class="r" data-p="IE" href="IE_Masarak_V2_7_24.html"><b data-t="IEc">IE</b><span data-t="IE">Industrial Engineering</span></a>
   </nav>
   <footer data-t="foot">Masarak: Auto Advisor · Release V2.7.27 · Tip: open your program, then Share → Add to Home Screen</footer>
@@ -77,11 +81,11 @@ footer{margin-top:22px;font-size:.82rem;color:var(--muted)}
 <script>
 (function(){
   var T={
-    en:{name:'Masarak',title:'Masarak: Auto Advisor',uni:'Jazan University',cont:'Continue where you left off',open:'Open my plan',all:'All programs',
+    en:{name:'Masarak',title:'Masarak: Auto Advisor',uni:'Jazan University',col1:'College of Applied Industrial Technology (CAIT) – Baish',col2:'College of Engineering and Computer Science',cont:'Continue where you left off',open:'Open my plan',all:'All programs',
         EPETc:'EPET',MMETc:'MMET',CHETc:'CHET',IEc:'IE',
         EPET:'Electrical Power Engineering Technology',MMET:'Mechanical Maintenance Engineering Technology',CHET:'Chemical Engineering Technology',IE:'Industrial Engineering',
         foot:'Masarak: Auto Advisor · Release V2.7.27 · Tip: open your program, then Share → Add to Home Screen'},
-    ar:{name:'مسارك',title:'مسارك: المرشد الأكاديمي',uni:'جامعة جازان',cont:'تابع من حيث توقفت',open:'افتح خطتي',all:'جميع البرامج',
+    ar:{name:'مسارك',title:'مسارك: المرشد الأكاديمي',uni:'جامعة جازان',col1:'كلية التطبيقات الصناعية - بيش',col2:'كلية الهندسة وعلوم الحاسب',cont:'تابع من حيث توقفت',open:'افتح خطتي',all:'جميع البرامج',
         EPETc:'كهر',MMETc:'هيك',CHETc:'هكي',IEc:'IE',
         EPET:'تقنية هندسة القوى الكهربائية',MMET:'تقنية هندسة الصيانة الميكانيكية',CHET:'تقنية الهندسة الكيميائية',IE:'الهندسة الصناعية',
         foot:'مسارك: المرشد الأكاديمي · الإصدار V2.7.27 · افتح برنامجك ثم مشاركة ← إضافة إلى الشاشة الرئيسية'}
