@@ -23,7 +23,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-ap
 .seg button:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
 main{max-width:560px;margin:0 auto;padding:20px 16px 32px}
 body{background:#f4f6fa}.top{background:#fff}
-.sub{margin:0 0 18px;color:var(--muted);font-size:.92rem}
+.logo{text-align:center;margin:4px 0 10px}.logo img{height:120px;width:auto}
+.sub{text-align:center;margin:0 0 18px;color:var(--muted);font-size:.92rem}
 .cont{display:block;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:18px;padding:20px;margin:0 0 26px;text-decoration:none}
 .cont[hidden]{display:none}
 .cont small{opacity:.85;font-size:.9rem}
@@ -55,6 +56,7 @@ footer{margin-top:22px;font-size:.82rem;color:var(--muted)}
   </div>
 </div></div>
 <main>
+  <div class="logo"><img src="jazan_university_logo.png" width="96" height="120" alt="Jazan University" data-ta="uni"></div>
   <p class="sub" data-t="college">College of Applied Industrial Technology (CAIT) – Baish · Jazan University</p>
   <a class="cont" id="cont" href="#" hidden>
     <small data-t="cont">Continue where you left off</small>
@@ -89,6 +91,7 @@ footer{margin-top:22px;font-size:.82rem;color:var(--muted)}
   function render(){
     var d=T[lang],h=document.documentElement; h.lang=lang; h.dir=(lang==='ar'?'rtl':'ltr'); document.title=d.title;
     document.querySelectorAll('[data-t]').forEach(function(e){e.textContent=d[e.getAttribute('data-t')];});
+    document.querySelectorAll('[data-ta]').forEach(function(e){e.alt=(lang==='ar'?'جامعة جازان':'Jazan University');});
     document.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-l')===lang));});
     var c=document.getElementById('cont');
     if(last&&URL[last]){c.hidden=false;c.href=URL[last];document.getElementById('contName').textContent=d[last+'c']+' · '+d[last];}else{c.hidden=true;}
